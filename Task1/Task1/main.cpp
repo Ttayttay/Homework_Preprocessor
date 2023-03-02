@@ -1,6 +1,10 @@
-﻿#include <iostream>
+﻿//#define MODE 1
 
-#define MODE 1
+#ifndef MODE
+#error "Constant MODE wasn't defined!";
+#endif
+
+#include <iostream>
 
 #ifdef MODE == 1
 int add(int n1, int n2) {
